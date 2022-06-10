@@ -1,0 +1,113 @@
+<DOCTYPE! html>
+	<head>
+		<title>Hadron Finder</title>
+		<script src = "quark.js"></script>
+		<style>
+		
+		* {
+		margin: 0px;
+		padding: 0px;
+		}
+		
+		body {
+		background-color: lightblue;
+		font-family: Bahnschrift;
+		}
+		
+		#symbol {
+		width: 15vw;
+		height: 15vh;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: white;
+		border: 1px solid black;
+		border-radius: 3px;
+		font-size: 6vw;
+		text-align: center;
+		padding: 3vh 0vw;
+		}
+		
+		sup, sub{
+			font-size: 4vw;
+		}
+		
+		#quarkput {
+			width: 25%;
+			height: 4vh;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: lightgray;
+			border: 1px solid black;
+			border-radius: 3px;
+			text-align: center;
+			padding-top: 0.5%;
+		}
+		
+		h1 {
+		text-align: center;
+		padding: 2%;
+		font-size: 3vw;
+		}
+	
+		input[type=button] {
+			padding: 2%;
+			border: 1px solid black;
+			border-radius: 5px;
+			font-family: Verdana;
+			font-size: 1.1vw;
+		}	
+		
+		.inputs {
+			margin-left: 9.5%;
+		}
+		
+		.quark {
+			width: 8vw;
+			margin-left: 5%;
+			background-color: lavender;
+		}
+		
+		.antiquark {
+			margin-left: 1%;
+			width: 12vw;
+			background-color: lavender;
+		}
+		
+		#clear {
+			float: left;
+			border-radius: 3px;
+			margin-left: 46%;
+			background-color: lightcoral;
+		}
+		
+		
+		</style>
+	</head>
+	<body>
+		<h1>What's My Hadron?</h1>
+		<p id = "symbol"></p>
+		<br>
+		<p id = "quarkput">Use the buttons to select your quarks!</p>
+		<br><br><br>
+		<div class = "inputs">
+			<input type="button" class = "quark" onclick = "addQuark('T')" value="Top"/>
+			<input type="button" class = "quark" onclick = "addQuark('B')" value="Bottom"/>
+			<input type="button" class = "quark" onclick = "addQuark('U')" value="Up"/>
+			<input type="button" class = "quark" onclick = "addQuark('D')" value="Down"/>
+			<input type="button" class = "quark" onclick = "addQuark('S')" value="Strange"/>
+			<input type="button" class = "quark" onclick = "addQuark('C')" value="Charm"/>
+		</div>
+		<br>
+		<div class = "inputs">
+			<input type="button" class = "antiquark" onclick = "addQuark('t')" value="Anti-top"/>
+			<input type="button" class = "antiquark" onclick = "addQuark('b')" value="Anti-bottom"/>
+			<input type="button" class = "antiquark" onclick = "addQuark('u')" value="Anti-up"/>
+			<input type="button" class = "antiquark" onclick = "addQuark('d')" value="Anti-down"/>
+			<input type="button" class = "antiquark" onclick = "addQuark('s')" value="Anti-strange"/>
+			<input type="button" class = "antiquark" onclick = "addQuark('c')" value="Anti-charm"/>
+		</div>
+		<br>
+		<input type="button" id = "clear" onclick = "clearQuark()" value="Clear"/>
+	</body>
+</html>
+	
